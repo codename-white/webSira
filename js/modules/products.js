@@ -28,14 +28,6 @@ const PRODUCTS = [
         category: "Collectibles",
         description: "เนื้อทองเหลือง รังแตก ไม่ยัดกรุ เดิมๆ สำหรับผู้สนับสนุนล็อตแรก",
         image: "assets/1.png"
-    },
-    {
-        id: 4,
-        name: "ไทยแลนด์สตาร์ตเตอร์แพ็ก (Starter Pack)",
-        price: 990,
-        category: "Apparel",
-        description: "รวมไอเทมระดับตำนาน: เสื้อวิน, ถุงสายรุ้ง, เก้าอี้แดง และไอเทมลับอื่นๆ",
-        image: "assets/ddd.png"
     }
 ];
 
