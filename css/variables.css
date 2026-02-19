@@ -1,0 +1,54 @@
+/* 
+  Design System Tokens
+  Web SiraSimmee - Light Theme (White Tone)
+*/
+
+:root {
+  /* --- Primary: Branding Pink (#E91E63) --- */
+  --primary-h: 340;
+  --primary-s: 82%;
+  --primary-l: 52%;
+
+  --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+  --primary-light: hsl(var(--primary-h), var(--primary-s), 65%);
+  --primary-dark: hsl(var(--primary-h), var(--primary-s), 40%);
+  --primary-glow: hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.15);
+
+  /* --- Backgrounds: White Tone --- */
+  --bg-dark: #ffffff !important;
+  --bg-darker: #ffffff !important;
+  --bg-surface: #ffffff !important;
+  --bg-card: #ffffff !important;
+
+  /* --- Text: Dark Contrast --- */
+  --text-white: #111827 !important;
+  --text-muted: #374151 !important;
+  --text-dim: #6b7280 !important;
+
+  /* --- Semantic --- */
+  --success: #38a169;
+  --error: #e53e3e;
+  --info: #3182ce;
+
+  /* --- Effects: Light Mode Friendly --- */
+  --glass: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-blur: 15px;
+
+  /* --- Spacing --- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+
+  /* --- Radius --- */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-full: 9999px;
+
+  --shadow-premium: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  /* --- Typography --- */
+  --font-main: 'Kanit', sans-serif;
+}

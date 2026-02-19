@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web SiraSimmee | Premium Shop Platform</title>
+    <meta name="description" content="สัมผัสประสบการณ์การช้อปปิ้งออนไลน์ระดับพรีเมียมที่ Web SiraSimmee">
+    <link rel="stylesheet" href="css/styles.css?v=1.2">
+    <style>
+        body, main, #products-list { background-color: #ffffff !important; }
+        .product-card { background-color: #ffffff !important; color: #111827 !important; border: 1px solid #eee !important; }
+        .product-info h3, .product-info p, .section-header h2 { color: #111827 !important; }
+        .search-container { background-color: #f3f4f6 !important; }
+        .search-container input { color: #111827 !important; }
+    </style>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://shop.sirasimm.ee/cdn/shop/files/pfp.jpg">
+</head>
+<body>
+    <div id="announcement-bar">
+        <span>ยินดีต้อนรับสู่ Shopsirasimmee 🍿 ของสะสมสุดพิเศษสำหรับคุณ!</span>
+    </div>
+    <header id="navbar">
+        <div class="container">
+            <nav style="display: flex; justify-content: space-between; align-items: center; flex-direction: row-reverse;">
+                <div class="logo">Sira<span>Simmee</span> 🍿</div>
+                <ul class="nav-links" style="display: flex; align-items: center; gap: 15px;">
+                    <li><button id="search-trigger" class="icon-btn">🔍</button></li>
+                    <li><button id="login-trigger" class="icon-btn">👤</button></li>
+                    <li id="cart-toggle-container">
+                        <button id="cart-toggle" class="cart-icon-btn">
+                            Cart <span id="cart-count">0</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Drawer -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Cart</h3>
+            <button id="cart-close">&times;</button>
+        </div>
+        <div id="cart-content-wrapper">
+            <!-- Dynamic content from cart.js -->
+            <div id="cart-items-list" class="cart-items-list"></div>
+            <div id="cart-empty-view" style="display: none; text-align: center; padding: 40px 20px;">
+                <p style="font-size: 1.2rem; margin-bottom: 10px;">Your cart is empty</p>
+                <p style="color: #666; font-size: 0.9rem; margin-bottom: 25px;">Have an account? <a href="#" style="color: var(--primary); text-decoration: underline;">Log in</a> to check out faster.</p>
+                <button id="continue-shopping" class="btn btn-outline" style="width: 100%;">Continue shopping</button>
+            </div>
+        </div>
+        <div class="cart-footer" id="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-amount">฿0</span>
+            </div>
+            <button class="btn btn-primary btn-block">Checkout Now</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal checkout-modal">
+        <div class="modal-content">
+            <button id="checkout-close" class="close-btn">&times;</button>
+            <div class="checkout-grid">
+                <div class="checkout-form-section">
+                    <h3>ข้อมูลการจัดส่ง</h3>
+                    <form id="checkout-form">
+                        <div class="form-group">
+                            <label for="full-name">ชื่อ-นามสกุล</label>
+                            <input type="text" id="full-name" placeholder="ระบุชื่อผู้รับ" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">เบอร์โทรศัพท์</label>
+                            <input type="tel" id="phone" placeholder="08x-xxx-xxxx" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">ที่อยู่จัดส่ง</label>
+                            <textarea id="address" rows="3" placeholder="ระบุที่อยู่สำหรับการจัดส่งอย่างละเอียด" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block confirm-order-btn">ยืนยันการสั่งซื้อ</button>
+                    </form>
+                </div>
+                <div class="checkout-summary-section">
+                    <h3>สรุปยอดสั่งซื้อ</h3>
+                    <div id="checkout-summary-list" class="summary-list">
+                        <!-- Summary items -->
+                    </div>
+                    <div class="summary-total">
+                        <span>ยอดรวมสุทธิ:</span>
+                        <span id="checkout-total-amount">฿0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main style="padding-top: 100px;">
+        <section id="products-list" class="container">
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">ทั้งหมด (All)</button>
+                <button class="filter-btn" data-category="Apparel">เสื้อผ้า (Apparel)</button>
+                <button class="filter-btn" data-category="Stickers">สติกเกอร์ (Stickers)</button>
+                <button class="filter-btn" data-category="Collectibles">ของสะสม (Collectibles)</button>
+            </div>
+            <!-- Products will be dynamically rendered here -->
+        </section>
+    </main>
+
+    <script type="module" src="js/app.js?v=1.2"></script>
+</body>
+</html>
