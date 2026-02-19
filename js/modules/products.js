@@ -7,35 +7,35 @@
 const PRODUCTS = [
     {
         id: 1,
-        name: "ไอแก๊ป รุ่นที่ 1 (รุ่นหนึ่งพูดน้ำไหลไฟดับ)",
+        name: "สติกเกอร์ MITH #1",
+        price: 109,
+        category: "Stickers",
+        description: "สติกเกอร์ MITH คอลเลกชันพิเศษ เซ็ตที่ 1 สำหรับแปะโน้ตบุ๊กและอุปกรณ์ต่างๆ",
+        image: "assets/3.png"
+    },
+    {
+        id: 2,
+        name: "สติกเกอร์ MITH #2",
+        price: 109,
+        category: "Stickers",
+        description: "สติกเกอร์ MITH คอลเลกชันพิเศษ เซ็ตที่ 2 รวมดีไซน์สตรีทและป้ายต่างๆ",
+        image: "assets/2.png"
+    },
+    {
+        id: 3,
+        name: "ไอแก๊ป รุ่นที่ 1",
         price: 349,
         category: "Collectibles",
         description: "เนื้อทองเหลือง รังแตก ไม่ยัดกรุ เดิมๆ สำหรับผู้สนับสนุนล็อตแรก",
         image: "assets/1.png"
     },
     {
-        id: 2,
-        name: "ไทยแลนด์สตรีทดีไซน์ (Sticker Set)",
-        price: 159,
-        category: "Stickers",
-        description: "สติกเกอร์รวมความเป็นไทยสไตล์สตรีท แปะอะไรก็เท่",
-        image: "assets/2.png"
-    },
-    {
-        id: 3,
+        id: 4,
         name: "ไทยแลนด์สตาร์ตเตอร์แพ็ก (Starter Pack)",
         price: 990,
         category: "Apparel",
         description: "รวมไอเทมระดับตำนาน: เสื้อวิน, ถุงสายรุ้ง, เก้าอี้แดง และไอเทมลับอื่นๆ",
-        image: "assets/3.png"
-    },
-    {
-        id: 4,
-        name: "สติกเกอร์ MITH #1",
-        price: 109,
-        category: "Stickers",
-        description: "สติกเกอร์ MITH คอลเลกชันพิเศษ",
-        image: "https://shop.sirasimm.ee/cdn/shop/files/sticker1.jpg"
+        image: "assets/ddd.png"
     }
 ];
 
