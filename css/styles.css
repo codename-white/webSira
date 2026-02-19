@@ -73,19 +73,25 @@ header.navbar-shrunk {
 }
 
 .logo {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #111827 !important;
+    display: flex;
+    align-items: center;
     cursor: pointer;
     transition: transform 0.3s;
 }
 
-.logo:hover {
-    transform: scale(1.02);
+.logo-img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+    transition: height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.logo span {
-    color: var(--primary) !important;
+header.navbar-shrunk .logo-img {
+    height: 35px;
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 .nav-links {
