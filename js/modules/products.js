@@ -97,8 +97,8 @@ const renderProductGrid = () => {
     if (!existingHeader) {
         const sectionHeader = `
             <div class="section-header">
-                <h2>Shopsirasimmee <span>Collections</span> 🍿</h2>
-                <p>สัมผัสคอลเลกชันพิเศษ "Made in Thailand" ที่คัดสรรมาเพื่อคุณโดยเฉพาะ</p>
+                <h2>Shopsirasimmee Collections 🍿</h2>
+                <p class="section-desc">สัมผัสคอลเลกชันพิเศษ "Made in Thailand" ที่คัดสรรมาเพื่อคุณโดยเฉพาะ</p>
             </div>
         `;
         listContainer.insertAdjacentHTML('beforeend', sectionHeader);

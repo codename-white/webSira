@@ -1,5 +1,3 @@
-import { openCheckout } from './checkout.js';
-
 let cart = JSON.parse(localStorage.getItem('sirashim_cart')) || [];
 
 export const initCart = () => {
@@ -14,28 +12,14 @@ const setupCartListeners = () => {
         addItem(e.detail);
     });
 
-    // Listen for order-success to clear cart
-    window.addEventListener('order-success', () => {
-        clearCart();
-    });
-
     // Toggle Cart Drawer
     const cartToggle = document.getElementById('cart-toggle');
-    const checkoutBtn = document.querySelector('.cart-footer .btn-primary');
     const cartClose = document.getElementById('cart-close');
     const overlay = document.getElementById('cart-overlay');
 
     if (cartToggle) cartToggle.addEventListener('click', toggleCart);
     if (cartClose) cartClose.addEventListener('click', toggleCart);
     if (overlay) overlay.addEventListener('click', toggleCart);
-
-    if (checkoutBtn) {
-        checkoutBtn.addEventListener('click', () => {
-            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            openCheckout(cart, total);
-            toggleCart(); // Close drawer when opening checkout
-        });
-    }
 };
 
 const clearCart = () => {

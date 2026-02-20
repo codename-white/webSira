@@ -25,106 +25,111 @@ body {
     padding: 0 var(--space-sm);
 }
 
-/* --- Announcement Bar --- */
-#announcement-bar {
-    background-color: var(--primary) !important;
-    color: #ffffff !important;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 0.85rem;
-    font-weight: 500;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1100;
-}
-
 /* --- Navbar --- */
-/* --- Header & Navbar: Senior Upgrade --- */
+/* --- Header & Navbar: Professional Senior Upgrade --- */
 header {
     position: fixed;
-    top: 40px;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 18px 0;
-    background: rgba(255, 255, 255, 0.8) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03) !important;
-    backdrop-filter: blur(12px) saturate(180%);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.75) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
+    backdrop-filter: blur(20px) saturate(200%);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.02),
+        0 2px 4px -1px rgba(0, 0, 0, 0.01) !important;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Scroll-triggered shrink effect */
+.navbar-inner {
+    max-width: 100% !important;
+    padding: 0 40px !important;
+}
+
+/* Scroll-triggered shrink effect: Professional Finish */
 header.navbar-shrunk {
-    padding: 10px 0;
+    padding: 6px 0;
     top: 0;
-    background: rgba(255, 255, 255, 0.95) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.05),
+        0 4px 6px -2px rgba(0, 0, 0, 0.02) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
 }
 
 .main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row-reverse;
-    /* Logo RIGHT, Icons LEFT */
+    width: 100%;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .logo {
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .logo-img {
-    height: 45px;
+    height: 32px;
     width: auto;
     object-fit: contain;
-    transition: height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 header.navbar-shrunk .logo-img {
-    height: 35px;
+    height: 28px;
 }
 
 .logo:hover {
     transform: scale(1.05);
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-
 .icon-btn {
-    background: none;
-    border: none;
-    font-size: 1.3rem;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    font-size: 1.25rem;
     cursor: pointer;
-    padding: 8px;
+    padding: 10px;
     border-radius: 50%;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     display: flex;
     align-items: center;
     justify-content: center;
+    color: rgba(75, 85, 99, 0.8);
+    backdrop-filter: blur(5px);
 }
 
 .icon-btn:hover {
-    background: rgba(233, 30, 99, 0.08);
-    transform: translateY(-3px) scale(1.1);
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.08);
+    color: var(--primary);
+    transform: translateY(-2px);
 }
 
 .cart-toggle-btn {
     position: relative;
     font-size: 1.4rem;
-}
-
-.cart-toggle-btn span#cart-count {
-    pointer-events: none;
 }
 
 #cart-count {
@@ -142,6 +147,70 @@ header.navbar-shrunk .logo-img {
     justify-content: center;
     border: 2px solid #fff;
     font-weight: 800;
+}
+
+/* --- Floating Social Bar (Bottom-Right) --- */
+.floating-social-bar {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1001;
+    pointer-events: none;
+}
+
+.floating-social-bar a {
+    pointer-events: auto;
+}
+
+.float-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.float-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: #4b5563;
+    transition: all 0.3s ease;
+}
+
+.float-icon:hover {
+    transform: translateX(-10px) scale(1.1);
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Brand Specific Hover Colors */
+.float-icon.fb:hover svg {
+    fill: #1877F2;
+}
+
+.float-icon.yt:hover svg {
+    fill: #FF0000;
+}
+
+.float-icon.ig:hover svg {
+    fill: #E4405F;
+}
+
+.float-icon.tt:hover svg {
+    fill: #000000;
+}
+
+.float-icon:hover {
+    border-color: rgba(0, 0, 0, 0.1);
 }
 
 /* --- Scroll Progress Bar --- */
@@ -192,10 +261,22 @@ header.navbar-shrunk .logo-img {
 
 /* --- Layout --- */
 main {
-    padding-top: 135px;
+    padding-top: 65px;
     /* Precision fit for Shrunk Navbar */
     min-height: 100vh;
     background: #ffffff !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Ensure everything starts from left */
+}
+
+/* Override container for main sections to match Navbar expansion */
+main .container {
+    max-width: 100% !important;
+    padding: 0 40px !important;
+    margin: 0 !important;
+    /* Remove centering */
 }
 
 /* --- Products --- */
@@ -224,19 +305,31 @@ main {
 
 .section-header {
     border-left: 4px solid var(--primary);
-    padding-left: 15px;
-    margin-bottom: 30px;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    text-align: left;
 }
 
 .section-header h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: #111827 !important;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.section-desc {
+    font-size: 1.1rem;
+    color: #6b7280 !important;
+    max-width: 700px;
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
+    width: 100%;
+    /* Ensure grid spans full width */
+    justify-content: start;
 }
 
 .product-card {
