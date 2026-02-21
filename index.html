@@ -85,6 +85,54 @@
         </section>
     </main>
 
+    <!-- Product Detail Modal -->
+    <div id="product-detail-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button id="modal-close" class="modal-close-btn">&times;</button>
+            <div class="modal-content">
+                <!-- Content injected by products.js -->
+                <div class="product-detail-view">
+                    <div class="detail-gallery">
+                        <div class="main-image">
+                            <img id="detail-main-img" src="" alt="">
+                        </div>
+                        <div class="thumbnail-grid" id="detail-thumbnails">
+                            <!-- Thumbnails show here -->
+                        </div>
+                    </div>
+                    <div class="detail-info">
+                        <h2 id="detail-title"></h2>
+                        <p class="detail-price" id="detail-price"></p>
+                        
+                        <div class="detail-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button id="detail-add-to-cart" class="btn-detail btn-add-cart">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+                                Add to cart
+                            </button>
+                        </div>
+                        <button id="detail-buy-now" class="btn-detail btn-buy-now">Buy it now</button>
+                        
+                        <div class="detail-description" id="detail-desc">
+                            <!-- Description content -->
+                        </div>
+                        
+                        <div class="detail-meta">
+                            <h3>You may also like</h3>
+                            <div class="related-products" id="related-products">
+                                <!-- Related products injected here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="floating-social-bar">
         <a href="https://www.facebook.com/gapbogapbo" target="_blank" class="float-icon fb" title="Facebook">
             <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1V12h3l-.5 3H13v6.8c4.56-.93 8-4.96 8-9.8z"></path></svg>

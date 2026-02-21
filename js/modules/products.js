@@ -11,7 +11,7 @@ const PRODUCTS = [
         price: 109,
         category: "Stickers",
         description: "สติกเกอร์ MITH คอลเลกชันพิเศษ เซ็ตที่ 1 สำหรับแปะโน้ตบุ๊กและอุปกรณ์ต่างๆ",
-        image: "assets/3.png"
+        image: "assets/1.png"
     },
     {
         id: 2,
@@ -27,7 +27,7 @@ const PRODUCTS = [
         price: 349,
         category: "Collectibles",
         description: "เนื้อทองเหลือง รังแตก ไม่ยัดกรุ เดิมๆ สำหรับผู้สนับสนุนล็อตแรก",
-        image: "assets/1.png"
+        image: "assets/3.png"
     }
 ];
 
